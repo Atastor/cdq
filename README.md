@@ -486,7 +486,7 @@ Create an entitlement in the app's Rakefile:
   app.entitlements['com.apple.developer.ubiquity-container-identifiers'] = ['iCloud.aa.bb.cc']
 ```
 
-Enable icloud (before the setup):
+Enable iCloud (before the setup):
 ```rubydoc
   cdq.stores.new(icloud: true)
   cdq.setup
