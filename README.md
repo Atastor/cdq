@@ -479,7 +479,7 @@ Also note that you should never use `object_id` as a model attribute as it will 
 As of version 0.1.10, there is some experimental support for iCloud, written by
 @katsuyoshi.  Please try it out and let us know how it's working for you. Proceed as follows:
 
-Let the iCloud storage container have the ID `iCloud.aa.bb.cc`. This is to be defined in your Apple developer's interface. Don't forget to incorporate the container into your applications ID and in your provisioning profile!
+Let the iCloud storage container have the ID `iCloud.aa.bb.cc`. This is to be defined in your Apple developer's interface. Don't forget to incorporate the container into your applications ID and your provisioning profile!
 
 Create an entitlement in the app's Rakefile:
 ```rubydoc
