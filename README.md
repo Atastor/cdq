@@ -492,7 +492,7 @@ Enable icloud (before the setup):
   cdq.setup
 ```
 
-Now your CDQ data storage is iCloud sharable.
+Now your CDQ data storage is iCloud sharable among your devices.
 
 
 ## Documentation
