@@ -477,14 +477,23 @@ Also note that you should never use `object_id` as a model attribute as it will 
 ## iCloud
 
 As of version 0.1.10, there is some experimental support for iCloud, written by
-@katsuyoshi.  Please try it out and let us know how it's working for you.  To
-enable, initialize like this:
+@katsuyoshi.  Please try it out and let us know how it's working for you. Proceed as follows:
 
-```ruby
-  cdq.stores.new(iCloud: true, container: "com.your.container.id")
+Let the iCloud storage container have the ID `iCloud.aa.bb.cc`. This is to be defined in your Apple developer's interface. Don't forget to incorporate the container into your applications ID and in your provisioning profile!
+
+Create an entitlement in the app's Rakefile:
+```rubydoc
+  app.entitlements['com.apple.developer.ubiquity-container-identifiers'] = ['iCloud.aa.bb.cc']
 ```
 
-You can also set up iCloud in your cdq.yml file.
+Enable icloud (before the setup):
+```rubydoc
+  cdq.stores.new(icloud: true)
+  cdq.setup
+```
+
+Now your CDQ data storage is iCloud sharable.
+
 
 ## Documentation
 
